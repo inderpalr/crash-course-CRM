@@ -22,7 +22,7 @@ pipeline {
                                         //sourceFiles: 'dist/trainSchedule.zip',
                                         //removePrefix: 'dist/',
                                         //remoteDirectory: '/tmp',
-                                        execCommand: 'cd /home/cloud_user/Documents && sudo apt-get update && sudo apt-get upgrade && sudo apt install python3-pip && sudo pip3 install virtualenv && virtualenv crm1 && cd crm1/bin/ && chmod +x activate && source activate && cd .. && sudo apt-get install python3-dev && git clone -b Part-20-Password-Reset-Email https://github.com/inderpalr/crash-course-CRM.git && cd crash-course-CRM && pip3 install -r requirements.txt && cd crm1 && gunicorn crm1.wsgi --bind 0.0.0.0:8080 --daemon'
+                                        execCommand: 'cd /home/cloud_user/Documents && sudo apt-get update && sudo apt-get upgrade && sudo apt install python3-pip && sudo pip3 install virtualenv && virtualenv crm1 && cd crm1/bin/ && chmod +x activate && source activate && cd .. && sudo apt-get install python3-dev && git clone -b Part-20-Password-Reset-Email https://github.com/inderpalr/crash-course-CRM.git && cd crash-course-CRM && pip3 install -r requirements.txt && cd crm1 && gunicorn crm1.wsgi --bind 0.0.0.0:8082 --daemon'
                                      //   execCommand: 'sudo /usr/bin/systemctl stop train-schedule && rm -rf /opt/train-schedule/* && unzip /tmp/trainSchedule.zip -d /opt/train-schedule && sudo /usr/bin/systemctl start train-schedule'
                                     )
                                 ]
@@ -55,7 +55,7 @@ pipeline {
                                         //sourceFiles: 'dist/trainSchedule.zip',
                                         //removePrefix: 'dist/',
                                         //remoteDirectory: '/tmp',
-                                        execCommand: 'cd /home/cloud_user/Documents && sudo apt-get update && sudo apt-get upgrade && sudo apt install python3-pip && sudo pip3 install virtualenv && virtualenv crm1 && cd crm1/bin/ && chmod +x activate && source activate && cd .. && sudo apt-get install python3-dev && git clone -b Part-20-Password-Reset-Email https://github.com/inderpalr/crash-course-CRM.git && cd crash-course-CRM && pip3 install -r requirements.txt && cd crm1 && python3 manage.py runserver 0.0.0.0:8080'
+                                        execCommand: 'cd /home/cloud_user/Documents && sudo apt-get update && sudo apt-get upgrade && sudo apt install python3-pip && sudo pip3 install virtualenv && virtualenv crm1 && cd crm1/bin/ && chmod +x activate && source activate && cd .. && sudo apt-get install python3-dev && git clone -b Part-20-Password-Reset-Email https://github.com/inderpalr/crash-course-CRM.git && cd crash-course-CRM && pip3 install -r requirements.txt && cd crm1 && gunicorn crm1.wsgi --bind 0.0.0.0:8083 --daemon'
                                     )
                                 ]
                             )
